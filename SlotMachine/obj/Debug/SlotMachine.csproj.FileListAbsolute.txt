@@ -14,7 +14,5 @@ E:\tech\Second Year\2015 WINTER\COMP-397-001 (Web Game Programming) - Tom Tsilio
 E:\tech\Second Year\2015 WINTER\COMP-397-001 (Web Game Programming) - Tom Tsiliopoulos (F)\Labs\Assignment02\SlotMachine\bin\SlotMachine.dll.config
 E:\tech\Second Year\2015 WINTER\COMP-397-001 (Web Game Programming) - Tom Tsiliopoulos (F)\Labs\Assignment02\SlotMachine\bin\SlotMachine.dll
 E:\tech\Second Year\2015 WINTER\COMP-397-001 (Web Game Programming) - Tom Tsiliopoulos (F)\Labs\Assignment02\SlotMachine\bin\SlotMachine.pdb
-E:\tech\Second Year\2015 WINTER\COMP-397-001 (Web Game Programming) - Tom Tsiliopoulos (F)\Labs\Assignment02\SlotMachine\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-E:\tech\Second Year\2015 WINTER\COMP-397-001 (Web Game Programming) - Tom Tsiliopoulos (F)\Labs\Assignment02\SlotMachine\obj\Debug\SlotMachine.csprojResolveAssemblyReference.cache
 E:\tech\Second Year\2015 WINTER\COMP-397-001 (Web Game Programming) - Tom Tsiliopoulos (F)\Labs\Assignment02\SlotMachine\obj\Debug\SlotMachine.dll
 E:\tech\Second Year\2015 WINTER\COMP-397-001 (Web Game Programming) - Tom Tsiliopoulos (F)\Labs\Assignment02\SlotMachine\obj\Debug\SlotMachine.pdb
