@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sitemanifest>
+  <IisApp path="E:\tech\Second Year\2015 WINTER\COMP-397-001 (Web Game Programming) - Tom Tsiliopoulos (F)\Labs\Assignment02\SlotMachine\obj\Release\Package\PackageTmp" />
+  <setAcl path="E:\tech\Second Year\2015 WINTER\COMP-397-001 (Web Game Programming) - Tom Tsiliopoulos (F)\Labs\Assignment02\SlotMachine\obj\Release\Package\PackageTmp" setAclResourceType="Directory" />
+  <setAcl path="E:\tech\Second Year\2015 WINTER\COMP-397-001 (Web Game Programming) - Tom Tsiliopoulos (F)\Labs\Assignment02\SlotMachine\obj\Release\Package\PackageTmp" setAclUser="anonymousAuthenticationUser" setAclResourceType="Directory" />
+</sitemanifest>

@@ -110,9 +110,12 @@
     <Content Include="Assets\images\ImageMap.xlsx" />
     <Content Include="Assets\images\NextButton.png" />
     <Content Include="Assets\images\Orange.png" />
+    <Content Include="Assets\images\QuitButton.png" />
+    <Content Include="Assets\images\ResetButton.png" />
     <Content Include="Assets\images\Seven.png" />
     <Content Include="Assets\images\slotmachine.png" />
     <Content Include="Assets\images\slotmachine_mockup.png" />
+    <Content Include="Assets\images\Spin.png" />
     <Content Include="Assets\images\SpinButton.png" />
     <Content Include="Assets\images\StartButton.png" />
     <Content Include="Assets\images\StartOverButton.png" />
@@ -139,7 +142,6 @@
     <Content Include="bin\SlotMachine.pdb" />
     <Content Include="Content\game.css" />
     <Content Include="Content\reset.css" />
-    <Content Include="obj\Debug\build.force" />
     <Content Include="obj\Debug\SlotMachine.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\SlotMachine.dll" />
     <Content Include="obj\Debug\SlotMachine.pdb" />
@@ -153,6 +155,7 @@
     <Content Include="Scripts\core\game.js" />
     <Content Include="Scripts\core\_reference.js" />
     <Content Include="Scripts\lib\easeljs-0.8.1.min.js" />
+    <None Include="Properties\PublishProfiles\comp-397-sdmd-assignment02.pubxml" />
     <None Include="Scripts\lib\jquery-2.1.4.intellisense.js" />
     <Content Include="Scripts\lib\jquery-2.1.4.js" />
     <Content Include="Scripts\lib\jquery-2.1.4.min.js" />

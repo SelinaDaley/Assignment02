@@ -7,6 +7,8 @@ module scenes {
         private _bet10Button: objects.Button;
         private _bet100Button: objects.Button;
         private _spinButton: objects.Button;
+        private _resetButton: objects.Button;
+        private _quitButton: objects.Button;
         private _reels: createjs.Bitmap[];
         private _jackpotText: objects.Label;
         private _creditsText: objects.Label;
@@ -61,6 +63,16 @@ module scenes {
             this.addChild(this._spinButton);
             this._spinButton.on("click", this._spinButtonClick, this); 
         
+            // add ResetButton to the scene
+            this._resetButton = new objects.Button("ResetButton", 259, 166, false);
+            this.addChild(this._resetButton);
+            this._resetButton.on("click", this._resetButtonClick, this);
+
+            // add QuitButton to the scene
+            this._quitButton = new objects.Button("QuitButton", 341, 166, false);
+            this.addChild(this._quitButton);
+            this._quitButton.on("click", this._quitButtonClick, this);
+
             // add JackPot Text to the scene
             this._jackpotText = new objects.Label(
                 this.jackpot.toString(),
@@ -235,7 +247,7 @@ module scenes {
             this.playerMoney += this.winnings;
             this._creditsText.text = this.playerMoney.toString();
             this._resetFruitTally();
-
+         
         }
 
         private _resetFruitTally(): void {
@@ -253,7 +265,7 @@ module scenes {
         private _initializeBitmapArray(): void {
             this._reels = new Array<createjs.Bitmap>();
             for (var reel: number = 0; reel < 3; reel++) {
-                this._reels[reel] = new createjs.Bitmap(assets.getResult("Blank"));
+                this._reels[reel] = new createjs.Bitmap(assets.getResult("Spin"));
                 this._reels[reel].x = 216 + (reel * 84);
                 this._reels[reel].y = 220;
                 this.addChild(this._reels[reel]);
@@ -262,7 +274,9 @@ module scenes {
         }
 
         private _placeBet(playerBet: number) {
-            // ensure player's bet is less than or equal to players money
+            // ensure player's bet is less than or equal to players money  
+            //this._disableSpinButton();
+         
             if (playerBet <= this.playerMoney) {
                 this.playerBet += playerBet;
                 this.playerMoney -= playerBet;
@@ -270,6 +284,15 @@ module scenes {
                 this._betText.text = this.playerBet.toString();
                 this.winnings = 0;
                 this._resultText.text = this.winnings.toString();
+            }
+        }
+
+        private _disableSpinButton() {
+            console.log("2 player money: " + this.playerMoney);
+
+            if (this.playerMoney == 0) {
+                this._spinButton.alpha = 0.7;
+                //this._spinButton.removeEventListener(outButton);
             }
         }
         
@@ -290,10 +313,32 @@ module scenes {
             this._placeBet(100);
         }
 
+        private _resetButtonClick(event: createjs.MouseEvent) {
+            console.log("Reset Game");
+            //FadeOut 
+            this._fadeOut(500, () => {
+                // Switch to the SLOT_MACHINE Scene
+                scene = config.Scene.SLOT_MACHINE;
+                changeScene();
+            });
+        }
+
+        private _quitButtonClick(event: createjs.MouseEvent) {
+            console.log("Quit Game");
+            //FadeOut 
+            this._fadeOut(500, () => {
+                // Switch to the GAME_OVER Scene
+                scene = config.Scene.GAME_OVER;
+                changeScene();
+            });
+        }
+
         private _spinButtonClick(event: createjs.MouseEvent): void {
             
             if (this.playerBet == 0 && this.playerMoney == 0) {
                 console.log("Player is out of money");
+                this._disableSpinButton();
+
             }
 
             // ensure player has enough money to play
@@ -309,7 +354,8 @@ module scenes {
                 // reset player's bet to zero
                 this.playerBet = 0;
                 this._betText.text = this.playerBet.toString();
-            }            
+            }               
+
         }
     }
 }
